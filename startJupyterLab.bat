@@ -18,6 +18,12 @@ if errorlevel 1 (
 	pip install jupyterlab
 )
 
+REM ============================================================
+REM HIER ZUSÄTZLICHE BIBLIOTHEKEN NACHINSTALLIEREN
+REM Kommentare entfernen und Bibliotheken hinzufügen:
+pip install numpy pandas matplotlib
+REM ============================================================
+
 REM start Jupyter Lab
 jupyter lab
 
