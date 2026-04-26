@@ -2,7 +2,7 @@
 setlocal
 set VENV_DIR=%USERPROFILE%\.jupytervenv
 
-REM check if venv already exists or create new
+REM check if venv already exists in the script's directory or create new
 if not exist "%VENV_DIR%" (
 	echo creating virtual environment in %VENV_DIR% ...
 	python -m venv "%VENV_DIR%"
@@ -19,8 +19,7 @@ if errorlevel 1 (
 )
 
 REM ============================================================
-REM HIER ZUSÄTZLICHE BIBLIOTHEKEN NACHINSTALLIEREN
-REM Kommentare entfernen und Bibliotheken hinzufügen:
+REM Add additional libraries for Jupyter Lab environment
 pip install numpy pandas matplotlib
 REM ============================================================
 
